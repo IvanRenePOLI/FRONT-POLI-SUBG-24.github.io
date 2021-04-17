@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Rick y Morty Wiki</title>
+</head>
+
+<body>
+
+    <div class="barraNavegacion">
+        <div style="padding: 16px 0px 16px 10px; color: white;">
+            <span class="fa fa-bars" aria-hidden="true" style="cursor: pointer; margin-right: 10px;"
+                onclick="abrirCerrarMenu(this)"></span>
+            <span>Rick y Morti Wiki</span>
+        </div>
+    </div>
+
+    <div id="menuLateral" class="menuLateral">
+        <div onclick="abrirPagina('PaginaPrincipal.html')">
+            <a>Página principal</a> <span class="fa fa-home"></span>
+        </div>
+        <div onclick="abrirPagina('SeccionPersonajes.html')">
+            <a>Personajes</a> <span class="fa fa-grav"></span>
+        </div>
+        <div>
+            <a>Locaciones</a> <span class="fa fa-map-marker"></span>
+        </div>
+        <div>
+            <a>Cápitulos</a> <span class="fa fa-play"></span>
+        </div>
+    </div>
+
+    <div id="contenedorPaginas" style="height: 100%;">
+
+        <iframe id="framePage" style="width: 100%; height: auto !important;" scrolling="no" src=""
+            frameborder="0"></iframe>
+    </div>
+
+    <div class="footerNavegacion">
+        <div class="image-container">
+            <div style="padding: 50px;">
+                <img src="https://i.pinimg.com/originals/e5/d2/45/e5d245434d18eb20d7bae9f963c663c4.jpg" width="150"
+                    alt="">
+            </div>
+        </div>
+        <div class="InfoContainer">
+            <div style="padding: 50px;">
+                <div class="devSeccion" style="width: 60%; float: left; background-color: #fff; max-height: 140px;">
+                    <ul class="unstyled">
+                        <li style="font-weight: 600;">Desarrolladores</li>
+                        <li></li>
+                        <li><a>Monroy Santos Ivan Rene</a></li>
+                        <li><a>Londono Zapata Jorge Mario</a></li>
+                        <li><a>Rodriguez Mendoza Esteban De Jesus Palacio Rivera </a></li>
+                        <li><a>Julian Sebastian Ferrucho Espanol</a></li>
+                        <li><a>Kevin Julian Ortega Gallego Nicolas</a></li>
+                    </ul>
+                </div>
+                <div class="docSeccion" style="width: 30%;  float: left; background-color: #fff; max-height: 140px;">
+                    <ul class="unstyled">
+                        <li style="font-weight: 600;">Documentación API</li>
+                        <li></li>
+                        <li><a href="https://rickandmortyapi.com/documentation/" target="_blank">The Rick and Morty
+                                API</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+//En el momento que el documento cargue, se abrirá la página principal 
+        window.onload = function () {
+            abrirPagina('PaginaPrincipal.html');
+        }
+//Está función le dará funcionalidad al menú lateral permitiendo abrirlo y cerrarlo  (Cordialmente, Ivan Monroy)
+        function abrirCerrarMenu(object) {
+            if (object.className === "fa fa-bars") {
+                document.getElementById("menuLateral").style.width = "250px";
+                document.getElementById("contenedorPaginas").style.marginLeft = "250px";
+                object.className = "fa fa-minus"
+            } else {
+                document.getElementById("menuLateral").style.width = "0";
+                document.getElementById("contenedorPaginas").style.marginLeft = "0";
+                object.className = "fa fa-bars"
+            }
+        }
+//Está función es ejecutada en el menú lateral para asignar el src al frame de las páginas y su height (Cordialmente, Ivan Monroy)
+        function abrirPagina(pagina) {
+            document.getElementById("framePage").setAttribute("src", pagina);
+            if (pagina.indexOf("PaginaPrincipal") >= 0) {
+                document.getElementById("framePage").style.height = "1450px";
+            } else if (pagina.indexOf("SeccionPersonajes") >= 0) {
+                document.getElementById("framePage").style.height = "6350px";
+            }
+        }
+//Está sección recibirá el postMessage de la función de cambio de página en Fetch.js y reasignará el src del frame y el height (Cordialmente, Ivan Monroy)
+        window.addEventListener('message', function (event) {
+                let data = event.data;
+                document.getElementById("framePage").setAttribute("src", data.pagina);
+                document.getElementById('framePage').style.height = data.height;
+        }, false);
+    </script>
+
+</body>
+
+</html>

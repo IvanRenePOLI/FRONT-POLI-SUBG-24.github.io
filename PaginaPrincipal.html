@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="Fetch.js"></script>
+  <title>página principal</title>
+</head>
+
+<body>
+
+  <div class="seccionTitulos imagen-pagina-principal-left"
+    style="background-color: black; color: white; background-image: url('https://i.pinimg.com/originals/dc/e3/bf/dce3bf93e7eec8a17ff8255c3ce1510f.png');">
+    <div class="contenedorTitulos">
+      <div class="content-rigth">
+        <h1>Bienvenido!</h1>
+        <p>Rick y Morty Wiki es una enciclopedia virtual dedicada a la recolección y organización de información sobre la serie Rick y Morty. Aquí encontraras todo sobre la emocionante franquicia: personajes, locanciones y capitulos</p>
+       </div>
+    </div>
+  </div>
+
+  <div class="seccionTitulos imagen-pagina-principal-full"
+    style="background-image: url('https://i.pinimg.com/originals/30/42/10/304210df8878017d5f9525291728f0eb.jpg');">
+    <div class="contenedorTitulos">
+      <div class="content-left"  style=" background-color: rgba(132, 67, 97, 0.7); padding-left: 5px;">
+        <h1>Conoce más sobre los personajes!</h1>
+        <p>En está opción podrás encontrar un listado con todos los personajes de la franquicia y conocer más sobre cada
+          uno de ellos</p>
+        <p class="cont-btn" onclick="openPage('SeccionPersonajes.html')"><a class="btn btn-red"role="button">Saber más <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccionTitulos imagen-pagina-principal-left"
+    style="background-image: url('https://blueprintgaming.com/wp-content/uploads/2019/10/RICK-AND-MORTY-PORTAL3Asset-1-403x400.png');">
+    <div class="contenedorTitulos">
+      <div class="content-rigth">
+        <h1>¿Quieres conocer más sobre los lugares que visitan nuestros protagonistas?</h1>
+        <p>En está opción podrás encontrar un listado con todas las locaciones de la serie, además de poder que
+          personajes residen aquí e información interesante del lugar</p>
+        <p class="cont-btn"><a class="btn btn-green" href="#" role="button">Saber más <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccionTitulos imagen-pagina-principal-full"
+  style="background-image: url('https://fondosmil.com/fondo/27346.png');">
+  <div class="contenedorTitulos">
+    <div class="content-left" style=" background-color: rgba(255, 0, 0, 0.5); padding-left: 5px;">
+      <h1>Conoce más sobre los episodios de la serie!</h1>
+      <p>En está opción podrás encontrar un listado con todos los episodios de la serie, además de ver que personajes
+        participaron en estos e información del captulo</p>
+      <p class="cont-btn"><a class="btn btn-purple" href="#" role="button">Saber más <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="seccionTitulos imagen-pagina-principal-full"
+style="background-image: url('https://images.hdqwalls.com/wallpapers/rick-and-morty-uy.jpg'); background-position-y: 65%;">
+<div class="contenedorTitulos">
+  <div class="content-rigth" style=" background-color: rgba(255, 82, 0, 0.5); padding-left: 5px;">
+    <h1>¿Sabias qué...?</h1>
+    <p id="CuriosidadText">Cada 10 segundos está sección sera refrescada con un dato curioso de la serie Rixk y Mory...</p>
+  </div>
+</div>
+</div>
+
+  <script>
+    //Una vez el documento haya cargado también se ejecutará la función LoadFunFacts() creada en Fetch.js (Cordialmente, Ivan Monroy)
+    window.onload = function(){
+      LoadFunFacts();
+    }
+  </script>
+</html>
