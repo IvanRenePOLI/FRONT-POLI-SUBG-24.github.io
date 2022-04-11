@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Fetch.js"></script>
+    <title>Productos - Tecnihidráulicos</title>
+</head>
+
+<body>
+    <div class="banner imagen-banner-full"
+        style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/211/491/776/automotive-beetle-black-and-white-buggy-wallpaper-preview.jpg');">
+        <div class="banner-section">
+
+            <h1 class="text-center">Conoce nuestros productos</h1>
+            <ul class="list-inline text-center">
+                <li>Nombre |</li>
+                <li>Descripción |</li>
+                <li>Precio</li>
+            </ul>
+        </div>
+    </div>
+    <div class="filter">
+        <h3 class="text-center" style="margin-top: 10px;"> ¿Estás buscando un producto en específico? </h1>
+            <div class="form-section" style="font-size: 14px;">
+                <div class="form-element" style="width: 90% !important;">
+                    <label>Filtro:</label>
+                    <div>
+                        <input class="form-control" placeholder="Filtrar por nombre" id="txtNombre"
+                            style="min-width: 60%;width: 60%;float: left;">
+                        <p class="cont-btn" onclick="LoadProductos()"
+                            style="width: 100px;float: left;margin: 0px 50px 0px 40px;"><a class="btn btn-red"
+                                style="font-size: 14px;" role="button">Consultar <i class="fa fa-search"
+                                    aria-hidden="true"></i></a></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="seccionTitulos imagen-pagina-principal-full"
+        style=" margin-left: 1%; margin-right: 1%;  border: 1px solid #025EEA; padding-left: 5px; display: none;">
+        <div class="contenedorTitulos">
+            <div class="container-image-char">
+                <img class="imagenProducto" onerror="this.src='https://us.123rf.com/450wm/koblizeek/koblizeek2002/koblizeek200200045/139747145-sin-s%C3%ADmbolo-de-vector-de-contorno-de-imagen-falta-el-icono-disponible-no-hay-galer%C3%ADa-para-este-momen.jpg?ver=6'" alt="" width="225" height="225">
+            </div>
+            <div class="character-content-right">
+                <h1 class="lblNombreChar" style="color: #025EEA;">Nombre del producto</h1>
+                <div class="form-section" style="font-size: 14px;">
+                    <div class="form-element">
+                        <label class="tagDesc">Precio:</label>
+                        <div>
+                            <span class="tagVal tagPrecio"> valor</span>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <label class="tagDesc">Marca:</label>
+                        <div>
+                            <span class="tagVal tagMarca"> valor</span>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <label class="tagDesc">Color:</label>
+                        <div>
+                            <span class="tagVal tagColor"> valor</span>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <label class="tagDesc">Cantidad disponible en almacén:</label>
+                        <div>
+                            <span class="tagVal tagCantidad"> valor</span>
+                        </div>
+                    </div>
+                    <div class="form-element" style="width: 80%;">
+                        <label class="tagDesc">Descripcion:</label>
+                        <div>
+                            <span class="tagVal tagDescripcion"> valor</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="cont-btn"><a class="btn btn-blue" href="#" role="button">Opiniones <i
+                            class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+            </div>
+        </div>
+    </div>
+    <div id="cont-characteres"></div>
+
+    <script>
+        //En el momento que el documento cargue, se abrirá la página principal 
+        window.onload = function () {
+            LoadProductos();
+        }
+    </script>
+</body>
+
+</html>
