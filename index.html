@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="Fetch.js"></script>
-    <title>Productos - Tecnihidráulicos</title>
+    <title>Productos</title>
 </head>
 
 <body>
     <div class="banner imagen-banner-full"
-        style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/211/491/776/automotive-beetle-black-and-white-buggy-wallpaper-preview.jpg');">
+        style="background-image: url('https://galeria.specto.mx/storage/images/63dc107edcfe1.jpg');">
         <div class="banner-section">
 
             <h1 class="text-center">Conoce nuestros productos</h1>
@@ -75,12 +75,12 @@
                     </div>
                     <div class="form-element" style="width: 80%;">
                         <label class="tagDesc">Descripcion:</label>
-                        <div>
+                        <div class="div-descripcion">
                             <span class="tagVal tagDescripcion"> valor</span>
                         </div>
                     </div>
                 </div>
-                <p class="cont-btn"><a class="btn btn-blue" href="#" role="button">Opiniones <i
+                <p class="cont-btn"><a class="btn btn-blue btn-opiniones" href="#" role="button">Opiniones <i
                             class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
             </div>
         </div>
@@ -91,6 +91,10 @@
         //En el momento que el documento cargue, se abrirá la página principal 
         window.onload = function () {
             LoadProductos();
+        }
+
+        const consultaOpinones = () =>{
+            
         }
     </script>
 </body>

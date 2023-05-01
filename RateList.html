@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="Fetch.js"></script>
+
+    <title>Opiniones</title>
+</head>
+
+<body>
+    <div class="banner imagen-banner-full"
+        style="background-image: url('https://e0.pxfuel.com/wallpapers/118/801/desktop-wallpaper-chalkboard-black-chalkboard.jpg');">
+        <div class="banner-section">
+
+            <h1 class="text-center" id="nameProduct">Opiniones del producto</h1>
+            <ul class="list-inline text-center">
+                <li> <label id="star-product"> </label> <i class="fa fa-star" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </div>
+    <div class="seccionTitulos imagen-pagina-principal-full"
+        style=" margin-left: 1%; margin-right: 1%;  border: 1px solid #025EEA; padding-left: 5px; display: none;">
+        <div class="contenedorTitulos">
+            <div class="container-image-char" style="width: 190px; height: 190px;">
+                <img class="imagenProducto" onerror="this.src='https://us.123rf.com/450wm/koblizeek/koblizeek2002/koblizeek200200045/139747145-sin-s%C3%ADmbolo-de-vector-de-contorno-de-imagen-falta-el-icono-disponible-no-hay-galer%C3%ADa-para-este-momen.jpg?ver=6'" alt="" width="190" height="190">
+            </div>
+            <div class="character-content-right">
+                <h1 class="lblCliente" style="color: #025EEA;"></h1>
+                <div class="form-section" style="font-size: 14px;">
+                    <div class="form-element">
+                        <label class="tagDesc">Calificación:</label>
+                        <div>
+                            <span class="tagVal tagCalif"> valor</span>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <label class="tagDesc">Contacto:</label>
+                        <div>
+                            <span class="tagVal tagContact"> valor</span>
+                        </div>
+                    </div>
+                    <div class="form-element" style="width: 80%;">
+                        <label class="tagDesc">Opinión:</label>
+                        <div class="div-descripcion">
+                            <span class="tagVal tagopinion"> valor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cont-characteres"></div>
+
+    <div class="seccionOpinion imagen-pagina-principal-full"
+    style=" margin-left: 1%; margin-right: 1%;  border: 1px solid green; padding-left: 5px;  background-color: rgb(227 255 226 / 50%); height: 310px;">
+    <div class="contenedorTitulos">
+        <div class="container-image-char" style="width: 225px; height: 275px; padding-top: 50px;">
+            <img id="imagenNOpinion" onerror="" alt="" width="225" height="225">
+        </div>
+        <div class="character-content-right">
+            <h1 class="lblCliente" style="color: #025EEA;"> ¿Qué opinas del producto? </h1>
+            <div class="form-section" style="font-size: 14px;">
+                <div class="form-element" style="width: 70%;">
+                    <label class="tagDesc">Calificación:</label>
+                    <div style="color: black !important;">
+                        <div class="form-check" style="width: 20%; float: left;">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="1" >
+                            <label class="form-check-label" for="exampleRadios1">
+                                1 <i class='fa fa-star' style='color: orange' aria-hidden='true'></i> 
+                            </label>
+                          </div>
+                          <div class="form-check" style="width: 20%; float: left;">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="radio2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                2 <i class='fa fa-star' style='color: orange' aria-hidden='true'></i> 
+                            </label>
+                          </div>
+                          <div class="form-check" style="width: 20%; float: left;">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="radio3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                3 <i class='fa fa-star' style='color: orange' aria-hidden='true'></i> 
+                            </label>
+                          </div>
+                          <div class="form-check" style="width: 20%; float: left;">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="radio4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                4 <i class='fa fa-star' style='color: orange' aria-hidden='true'></i> 
+                            </label>
+                          </div>
+                          <div class="form-check" style="width: 20%; float: left;">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="radio5" value="5" checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                                5 <i class='fa fa-star' style='color: orange' aria-hidden='true'></i>
+                            </label>
+                          </div>
+                    </div>
+                </div>
+                <div class="form-element" style="width: 35%;">
+                    <label class="tagDesc">Nombre:</label>
+                    <div>
+                        <input type="email" class="form-control" placeholder="Juan Perez" id="txtNombre" style="height: 25px;
+                        font-size: 14px;" />
+                    </div>
+                </div>
+                <div class="form-element" style="width: 35%;">
+                    <label class="tagDesc">Contacto:</label>
+                    <div>
+                        <input type="email" class="form-control" placeholder="name@example.com" id="txtContacto" style="height: 25px;
+                        font-size: 14px;" />
+                    </div>
+                </div>
+                <div class="form-element" style="width: 80%;height: 70px;">
+                    <label class="tagDesc">Opinión:</label>
+                    <div class="div-descripcion" style="height: 70px;">
+                        <textarea id="txtOpinion" class="form-control" style="max-width: 100%; height: 68px; resize: none;" draggable="false" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="cont-btn" style="padding-top: 55px;"> <button type="button" onclick="guardarOpinion()" class="btn btn-success">¡Guardar opinión!</button> </p>
+        </div>
+    </div>
+</div>
+
+    <script>
+        //En el momento que el documento cargue, se abrirá la página principal 
+        window.onload = function () {
+            loadOpiniones();
+        }
+    </script>
+</body>
+
+</html>
